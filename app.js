@@ -18,10 +18,10 @@ function addBookToLibrary(book) {
   myLibrary.push(book);
 }
 
-const book1 = new Book('Sapiens: A Brief History of Humankind', 'Yuval Noah Harari', 1000, true);
-const book2 = new Book('How to Stop Worrying and Start Living', 'Dale Carnegie', 570, true);
-const book3 = new Book('A Study in Scarlet', ' Arthur Conan Doyle', 500, true);
-const book4 = new Book('A Promised Land', 'Barack Obama', 400, false);
+const book1 = new Book('Sapiens: A Brief History of Humankind', 'Yuval Noah Harari', 464, true);
+const book2 = new Book('How to Stop Worrying and Start Living', 'Dale Carnegie', 306, true);
+const book3 = new Book('A Study in Scarlet', ' Arthur Conan Doyle', 176, true);
+const book4 = new Book('A Promised Land', 'Barack Obama', 768, false);
 
 addBookToLibrary(book1);
 addBookToLibrary(book2);

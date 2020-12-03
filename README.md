@@ -5,6 +5,12 @@ The follwing things have been practiced here:
 - DOM Manipulation with JavaScript
 - Use of JavaScript functions and loops
 
+## Live Demo:
+
+
+## Screen-shots:
+<img src="img/ss.png">
+
 ## Build-With
 
 - HTML5
