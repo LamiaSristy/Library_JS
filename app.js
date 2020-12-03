@@ -42,7 +42,7 @@ function createIsReadBtn(book){
         readBtn.classList.toggle('notreadbtn');
      } 
      //toggle btn for isRead
-     readBtn.addEventListener('click', () => {
+     readBtn.addEventListener('click', function() {
          book.isread=!book.isread;
          readBtn.textContent = book.isread? 'Read' : 'NotRead';    
          readBtn.classList.toggle('readbtn');
@@ -57,7 +57,7 @@ function createDeleteBtn(index){
     //delete a book Btn
     deleteBtn.textContent = 'Delete';    
 
-    deleteBtn.addEventListener('click', () => {
+    deleteBtn.addEventListener('click', function() {
         alert(`Are you sure? You want to delete this book?`);
         myLibrary.splice(index, 1);
         displayLibrary(myLibrary);
@@ -99,7 +99,7 @@ function displayLibrary(array){
 displayLibrary(myLibrary);
 
 // Display the form
-displayFromBtn.addEventListener('click', () => {
+displayFromBtn.addEventListener('click', function() {
     form.classList.toggle('display');
 });
 
