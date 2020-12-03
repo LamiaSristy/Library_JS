@@ -2,6 +2,8 @@ const container = document.getElementsByClassName('container')[0];
 const submitBtn = document.getElementsByClassName('submit')[0];
 const title = document.getElementById('title');
 const author = document.getElementById('author');
+const pages = document.getElementById('page');
+const read = document.getElementById('read');
 const displayFromBtn = document.getElementById('new-bookbtn');
 const form = document.getElementById('create-form');
 
@@ -105,15 +107,17 @@ displayFromBtn.addEventListener('click', () => {
 submitBtn.addEventListener("click", function(e){
     e.preventDefault(); // This will prevent the default behaviour of the event.
 
-    if(title.value === '' || author.value === ''){
+    if(title.value === '' || author.value === ''|| pages.value === ''){
         alert(`Can't create book because some properties are missing`);
         return;
     }
 
-    let newBook = new Book(title.value, author.value);
+    let newBook = new Book(title.value, author.value, pages.value, read.checked);
     addBookToLibrary(newBook);
     displayLibrary(myLibrary);
     title.value = '';
     author.value = '';
+    pages.value = '';
+    read.checked = false;
 });
 
