@@ -48,7 +48,7 @@ body {
     /* width: 25%; */
     height: 30vh;    
     padding: 1rem;
-    margin: 0 10px;
+    margin: 10px 10px;
     text-align: center;
     background-color: #fff; 
     color: rgb(219, 74, 30); 
@@ -57,7 +57,7 @@ body {
   }
 
   .bookdiv:hover {
-    transform: scale(1.1, 1.1);
+    transform: scale(1.02, 1.02);
   }
 
   .readbtn {
