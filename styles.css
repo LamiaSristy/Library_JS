@@ -17,14 +17,16 @@ body {
   }  
   
   .container {
-    margin-top: 10px;  
+    width: 80%;
+    margin: 10px auto;
     background-color:  rgb(87, 85, 85); 
+    border-radius: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
     justify-content: space-around;
     align-items: center;
-    padding: 1.5rem 0;
+    padding: 1.5rem 1.5rem;
     gap: 0.8rem;
   }
 
@@ -37,6 +39,7 @@ body {
     background-color: #fff; 
     color: rgb(219, 74, 30); 
     box-shadow: 5px 10px;
+    border-radius: 7px;
   }
 
   .bookdiv:hover {
@@ -45,12 +48,13 @@ body {
 
   .newbook{
     display: flex;
-    margin-top: 10px;
+    margin-top: 20px;
   }
+
   .addbtn {
     border: 2px solid rgb(219, 74, 30);
     padding: 10px;
-    border-radius: 25px;
+    border-radius: 5px;
     background-color:rgb(219, 74, 30);
     color: white;
     width: 15vw;
@@ -61,27 +65,37 @@ body {
   }
   
   form {
-    width: 350px;
-    margin: auto;
-    border: 1px dotted purple;
-    height: 40vh;
+    width: 81%;
+    margin: 0 auto;
+    border: 1px solid rgb(219, 74, 30);    
     border-radius: 10px;
     padding: 1rem;
-    background-color: rgb(240, 239, 240);
+    background-color: rgb(236, 130, 98);
+    text-align: center;
+    color: #fff;    
+   font-weight: 700;
   }
   
   form input {
     width: 50%;
     padding: 5px;
     margin: 0.5rem;
+    border: 1px solid rgb(219, 74, 30);
+    border-radius: 5px;
   }
-  
+   
   form input:last-child {
     width: auto;
   }
-  
- 
-  
+
+  form {
+    display: none;
+  }
+
+  .display {
+    display: block;
+  }
+
   .submitbtn {
     background-color: rgb(117, 100, 117);
     color: white;

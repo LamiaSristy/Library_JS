@@ -1,4 +1,9 @@
 const container = document.getElementsByClassName('container')[0];
+const submitBtn = document.getElementsByClassName('submit')[0];
+const title = document.getElementById('title');
+const author = document.getElementById('author');
+const displayFromBtn = document.getElementById('new-bookbtn');
+const form = document.getElementById('create-form');
 
 let myLibrary = [];
 
@@ -33,19 +38,41 @@ function displayLibrary(array){
         const div = document.createElement('div');
         div.classList.add('bookdiv'); // Add the style for div
         
-        const title = document.createElement('h3');
-        const author = document.createElement('p');
+        const title_El = document.createElement('h3');
+        const author_El = document.createElement('p');
         
         // Data insertion
-        title.textContent = book.title;        
-        author.textContent = `Author: ${book.author}`;
+        title_El.textContent = book.title;        
+        author_El.textContent = `Author: ${book.author}`;
 
         //Organogram
         container.appendChild(div);
-        div.appendChild(title);
-        div.appendChild(author);
+        div.appendChild(title_El);
+        div.appendChild(author_El);
     }
 }
 
 displayLibrary(myLibrary);
+
+// Display the form
+displayFromBtn.addEventListener('click', () => {
+    form.classList.toggle('display');
+});
+
+// Add a new book
+submitBtn.addEventListener("click", function(e){
+    e.preventDefault(); // This will prevent the default behaviour of the event.
+
+    if(title.value === '' || author.value === ''){
+        alert(`Can't create book because some properties are missing`);
+        return;
+    }
+
+    let newBook = new Book(title.value, author.value);
+    addBookToLibrary(newBook);
+    displayLibrary(myLibrary);
+    title.value = '';
+    author.value = '';
+});
+
 

@@ -14,18 +14,12 @@ The follwing things have been practiced here:
 
 ## Getting Started
 
-### Prerequisites
-
-To get this project up and running locally, you must already have ruby and necessary gems installed on your computer
-
 **To get this project set up on your local machine, follow these simple steps:**
 
 1. Open Terminal.
 2. Navigate to your desired location to download the contents of this repository.
 3. Copy and paste the following code into the Terminal: git clone https://github.com/LamiaSristy/Library_JS
 4. Run ```cd Library_JS```.
-
-
 
 ## Author Details::
 
