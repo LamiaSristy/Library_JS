@@ -1,0 +1,91 @@
+body {
+    font-size: 18px;
+  }
+  
+
+  #page-banner {
+    background: rgb(219, 74, 30);
+    padding: 10px 0;
+  }
+
+  .title {
+    color: #fff;
+    width: fit-content;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 15px 0;
+  }  
+  
+  .container {
+    margin-top: 10px;  
+    background-color:  rgb(87, 85, 85); 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.5rem 0;
+    gap: 0.8rem;
+  }
+
+  .bookdiv {
+    /* width: 25%; */
+    height: 30vh;    
+    padding: 1rem;
+    margin: 0 10px;
+    text-align: center;
+    background-color: #fff; 
+    color: rgb(219, 74, 30); 
+    box-shadow: 5px 10px;
+  }
+
+  .bookdiv:hover {
+    transform: scale(1.1, 1.1);
+  }
+
+  .newbook{
+    display: flex;
+    margin-top: 10px;
+  }
+  .addbtn {
+    border: 2px solid rgb(219, 74, 30);
+    padding: 10px;
+    border-radius: 25px;
+    background-color:rgb(219, 74, 30);
+    color: white;
+    width: 15vw;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+  }
+  
+  form {
+    width: 350px;
+    margin: auto;
+    border: 1px dotted purple;
+    height: 40vh;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgb(240, 239, 240);
+  }
+  
+  form input {
+    width: 50%;
+    padding: 5px;
+    margin: 0.5rem;
+  }
+  
+  form input:last-child {
+    width: auto;
+  }
+  
+ 
+  
+  .submitbtn {
+    background-color: rgb(117, 100, 117);
+    color: white;
+    width: 10vw;
+    padding: 0.1rem;
+  }
+  
