@@ -29,24 +29,34 @@ addBookToLibrary(book3);
 addBookToLibrary(book4);
 
 function createIsReadBtn(book){
-    const readBtn = document.createElement('button');
+    const readBtn = document.createElement('button');    
      // Check for read or not
-     if(book.isread) readBtn.textContent = 'Read';
-     else readBtn.textContent = 'NotRead';
+     if(book.isread) {
+         readBtn.textContent = 'Read';
+         readBtn.classList.toggle('readbtn');
+     }    
+     else{
+        readBtn.textContent = 'NotRead';
+        readBtn.classList.toggle('notreadbtn');
+     } 
      //toggle btn for isRead
      readBtn.addEventListener('click', () => {
          book.isread=!book.isread;
-         readBtn.textContent = book.isread? 'Read' : 'NotRead';
+         readBtn.textContent = book.isread? 'Read' : 'NotRead';    
+         readBtn.classList.toggle('readbtn');
+         readBtn.classList.toggle('notreadbtn');   
      });
     return readBtn; 
 }
 
 function createDeleteBtn(index){
     const deleteBtn = document.createElement('button');
+    deleteBtn.classList.add('deletebtn');
     //delete a book Btn
-    deleteBtn.textContent = 'Delete';
+    deleteBtn.textContent = 'Delete';    
 
     deleteBtn.addEventListener('click', () => {
+        alert(`Are you sure? You want to delete this book?`);
         myLibrary.splice(index, 1);
         displayLibrary(myLibrary);
     });

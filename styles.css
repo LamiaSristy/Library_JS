@@ -46,6 +46,30 @@ body {
     transform: scale(1.1, 1.1);
   }
 
+  .readbtn {
+    width: 200px;
+    background-color: rgb(53, 141, 65);
+    border: 1px solid rgb(53, 141, 65);
+    color: #fff;
+    border-radius: 2px;
+  }
+
+  .notreadbtn {
+    width: 200px;
+    background-color: rgb(255, 136, 0);
+    border: 1px solid rgb(255, 136, 0);
+    color: #fff;
+    border-radius: 2px;
+  }
+
+  .deletebtn {
+    width: 200px;
+    background-color: rgb(139, 18, 18);
+    border: 1px solid rgb(139, 18, 18);
+    color: #fff;
+    border-radius: 2px;    
+  }
+
   .newbook{
     display: flex;
     margin-top: 20px;
@@ -101,5 +125,4 @@ body {
     color: white;
     width: 10vw;
     padding: 0.1rem;
-  }
-  
+  }  
