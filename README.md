@@ -9,7 +9,7 @@ The follwing things have been practiced here:
 [My Library](https://raw.githack.com/LamiaSristy/Library_JS/master/index.html)
 
 ## Screen-shots:
-<img src="img/ss.png">
+<img src="img/screenshot.png">
 
 ## Build-With
 
