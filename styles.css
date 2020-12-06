@@ -1,166 +1,175 @@
 html {
-    height: 100%;
-    box-sizing: border-box;
-  }
-  
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 body {
-    position: relative;
-    margin: 0;
-    padding-bottom: 6rem;
-    min-height: 100%;
-    font-family: "Helvetica Neue", Arial, sans-serif;
-  }  
+  position: relative;
+  margin: 0;
+  padding-bottom: 6rem;
+  min-height: 100%;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
 
 #page-banner {
   background: rgb(219, 74, 30);
   padding: 10px 0;
 }
 
-  .title {
-    color: #fff;
-    width: fit-content;
-    margin: auto;
-    padding: 1rem;
-    border-radius: 15px 0;
-  }  
-  
-  .container {
-    width: 80%;
-    margin: 10px auto;
-    background-color:  rgb(87, 85, 85); 
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1.5rem 1.5rem;
-    gap: 0.8rem;
-  }
+.title {
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 15px 0;
+}
 
-  .bookdiv {
-    /* width: 25%; */
-    height: 30vh;    
-    padding: 1rem;
-    margin: 10px 10px;
-    text-align: center;
-    background-color: #fff; 
-    color: rgb(219, 74, 30); 
-    box-shadow: 5px 10px;
-    border-radius: 7px;
-  }
+.container {
+  width: 80%;
+  margin: 10px auto;
+  background-color: rgb(87, 85, 85);
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  gap: 0.8rem;
+}
 
-  .bookdiv:hover {
-    transform: scale(1.02, 1.02);
-  }
+.bookdiv {
+  height: 30vh;
+  padding: 1rem;
+  margin: 10px 10px;
+  text-align: center;
+  background-color: #fff;
+  color: rgb(219, 74, 30);
+  box-shadow: 5px 10px;
+  border-radius: 7px;
+}
 
-  .readbtn {
-    width: 200px;
-    background-color: rgb(53, 141, 65);
-    border: 1px solid rgb(53, 141, 65);
-    color: #fff;
-    border-radius: 2px;
-  }
+.bookdiv:hover {
+  transform: scale(1.02, 1.02);
+}
 
-  .notreadbtn {
-    width: 200px;
-    background-color: rgb(255, 136, 0);
-    border: 1px solid rgb(255, 136, 0);
-    color: #fff;
-    border-radius: 2px;
-  }
+.readbtn {
+  width: 200px;
+  background-color: rgb(53, 141, 65);
+  border: 1px solid rgb(53, 141, 65);
+  color: #fff;
+  border-radius: 2px;
+}
 
-  .deletebtn {
-    width: 200px;
-    background-color: rgb(139, 18, 18);
-    border: 1px solid rgb(139, 18, 18);
-    color: #fff;
-    border-radius: 2px;    
-  }
+.notreadbtn {
+  width: 200px;
+  background-color: rgb(255, 136, 0);
+  border: 1px solid rgb(255, 136, 0);
+  color: #fff;
+  border-radius: 2px;
+}
 
-  .newbook{
-    display: flex;
-    margin-top: 20px;
-  }
+.deletebtn {
+  width: 200px;
+  background-color: rgb(139, 18, 18);
+  border: 1px solid rgb(139, 18, 18);
+  color: #fff;
+  border-radius: 2px;
+}
 
-  .addbtn {
-    border: 2px solid rgb(219, 74, 30);
-    padding: 10px;
-    border-radius: 5px;
-    background-color:rgb(219, 74, 30);
-    color: white;
-    width: 15vw;
-    margin: 0 auto;
-    margin-bottom: 1.5rem;
-    padding: 0.5rem;
-    text-align: center;
-  }
-  
-  form {
-    width: 81%;
-    margin: 0 auto;
-    border: 1px solid rgb(219, 74, 30);    
-    border-radius: 10px;
-    padding: 1rem;
-    background-color: rgb(236, 130, 98);
-    text-align: center;
-    color: #fff;    
-   font-weight: 700;
-  }
-  
-  form input {
-    width: 50%;
-    padding: 5px;
-    margin: 0.5rem;
-    border: 1px solid rgb(219, 74, 30);
-    border-radius: 5px;
-  }
-   
-  form input:last-child {
-    width: auto;
-  }
+.newbook {
+  display: flex;
+  margin-top: 20px;
+}
 
-  form {
-    display: none;
-  }
+.addbtn {
+  border: 2px solid rgb(219, 74, 30);
+  border-radius: 5px;
+  background-color: rgb(219, 74, 30);
+  color: white;
+  width: 15vw;
+  margin: 0 auto;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem;
+  text-align: center;
+}
 
-  .display {
-    display: block;
-  }
+form {
+  display: none;
+  width: 81%;
+  margin: 0 auto;
+  border: 1px solid rgb(219, 74, 30);
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: rgb(236, 130, 98);
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+}
 
-  .submitbtn {
-    background-color: rgb(117, 100, 117);
-    color: white;
-    width: 10vw;
-    padding: 0.1rem;
-  }  
+form input {
+  width: 50%;
+  padding: 5px;
+  margin: 0.5rem;
+  border: 1px solid rgb(219, 74, 30);
+  border-radius: 5px;
+}
 
+form input:last-child {
+  width: auto;
+}
+
+.display {
+  display: block;
+}
+
+.error {
+  display: none;
+  width: 50%;
+  background-color: rgb(143, 25, 25);
+  color: #fff;
+  margin: 0 auto;
+  border: 1px solid rgb(143, 25, 25);
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.error-display {
+  display: block;
+}
+
+.submitbtn {
+  background-color: rgb(117, 100, 117);
+  color: white;
+  width: 10vw;
+  padding: 0.1rem;
+}
 
 footer {
   position: absolute;
   right: 0;
   bottom: 0;
-  left: 0;  
+  left: 0;
   width: 100%;
   background: rgb(49, 49, 49);
-  color: #fff;  
+  color: #fff;
 }
 
 footer p {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 footer li {
-   list-style: none;
+  list-style: none;
 }
 
-.flexfooter {    
-    display: flex;
-    justify-content: center;
+.flexfooter {
+  display: flex;
+  justify-content: center;
 }
