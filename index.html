@@ -2,63 +2,72 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <script src="https://kit.fontawesome.com/867f1dd431.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <link rel="stylesheet" href="styles.css">
   <title>MyLibrary</title>
 </head>
 <body>
+  <header>
+    <nav class="navbar navbar-light bg-light">
+      <h1 class="title">Book Library</h1>  
+    </nav>
+  </header>
   <div id="wrapper">
-    
-    <header>
-        <div id="page-banner">
-            <h1 class="title">Book Library</h1>           
-        </div>
-    </header>
-
     <!-- Contains the main body -->
-    <div class="container">
-    </div>
+    <div class="container mt-5">
+      <div class="row card-deck">      
+     </div>
+  </div>
     
     <!-- Add a new book -->
     <div>        
         <div class= 'newbook'>
             <button class="btn addbtn" id='new-bookbtn'>New Book</button>
         </div> 
-        <form class="form" id='create-form'>
+        <form class="form " id='create-form'>
           <p>Add a new book:</p>
           <p class = 'error' id='error'>Please enter all required properties for creating a book</p>
           <label for="title">Book title</label>
-          <input type="text" id="title"><br/>
+          <input class="form-control" type="text" id="title"><br/>
           <label for="author">Book author</label>
-          <input type="text" id="author"><br/>  
+          <input class="form-control" type="text" id="author"><br/>  
           <label for="page">Number of Pages</label>
-          <input type="number" id="page" min="1"><br/>       
+          <input class="form-control" type="number" id="page" min="1"><br/>       
           <label for="read">Have you read this book?</label>
-          <input type="checkbox" id="read"><br/>
+          <input class="form-control" type="checkbox" id="read"><br/>
           <button type="submit" class="submit addbtn">Create</button>
         </form>
       </div>
 
-      <footer  class="displaynone">
-        <div class="flexfooter">
-          <p>
-            <small>Copyright &copy; All rights reserved - by Lamia$Talha</small>
-          </p>
-          <ul class="">
-             <li>
-               <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter"></i>
-                <i class="fab fa-instagram "></i>
-                 <i class="fab fa-tumblr "></i>
-                 <i class="fab fa-linkedin-in "></i>
-             </li>
-          </ul> 
-        </div>                
-      </footer>
+      <!-- Footer -->
+    <footer class="page-footer font-small cyan darken-3">
+
+      <div class="flexfooter">
+        <p>
+          <small>Copyright &copy;Lamia$risty</small>
+        </p>
+        <ul class="mt-3">
+           <li>
+             <i class="fab fa-facebook-square mr-2"></i>
+              <i class="fab fa-twitter mr-2"></i>
+              <i class="fab fa-instagram mr-2"></i>            
+               <i class="fab fa-linkedin-in mr-2"></i>
+           </li>
+        </ul> 
+      </div>                
+    
+    </footer>
+    <footer  class="">
+     
+    </footer>
 
   </div> 
- 
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
 
 </body>
 <script defer src="script.js"></script>

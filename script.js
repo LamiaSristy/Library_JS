@@ -1,4 +1,5 @@
-const container = document.getElementsByClassName('container')[0];
+// const container = document.getElementsByClassName('container')[0];
+const row = document.getElementsByClassName('row')[0];
 const submitBtn = document.getElementsByClassName('submit')[0];
 const title = document.getElementById('title');
 const author = document.getElementById('author');
@@ -35,8 +36,8 @@ const deleteBookFromLibrary = (title, author) => {
 const deleteFn = (deleteBtn) => {
   deleteBtn.addEventListener('click', (e) => {
     const el = e.target.parentElement;
-    const title = el.querySelector('h3').textContent;
-    const author = el.querySelector('h5').textContent;
+    const title = el.querySelector('h5').textContent;
+    const author = el.querySelector('p').textContent;
     el.parentNode.removeChild(el);
 
     deleteBookFromLibrary(title, author);
@@ -46,7 +47,7 @@ const deleteFn = (deleteBtn) => {
 const readFn = (readBtn, book) => {
   readBtn.addEventListener('click', () => {
     book.isread = !book.isread;
-    readBtn.textContent = book.isread ? 'Read' : 'NotRead';
+    readBtn.textContent = book.isread ? 'Read:Y' : 'Read:N';
     readBtn.classList.toggle('readbtn');
     readBtn.classList.toggle('notreadbtn');
   });
@@ -66,10 +67,10 @@ const createIsReadBtn = (book) => {
   const readBtn = document.createElement('button');
   // Check for read or not
   if (book.isread) {
-    readBtn.textContent = 'Read';
+    readBtn.textContent = 'Read:Y';
     readBtn.classList.toggle('readbtn');
   } else {
-    readBtn.textContent = 'NotRead';
+    readBtn.textContent = 'Read:N';
     readBtn.classList.toggle('notreadbtn');
   }
 
@@ -79,17 +80,18 @@ const createIsReadBtn = (book) => {
 
 
 const displayLibrary = (array) => {
-  container.innerHTML = '';
+  row.innerHTML = '';
 
   for (let i = 0; i < array.length; i += 1) {
     const book = array[i];
 
     // Create the element
     const div = document.createElement('div');
-    div.classList.add('bookdiv'); // Add the style for div
+    // div.classList.add('card'); // Add the style for div
+    div.classList.add('card', 'col-12', 'col-md-3');
 
-    const title = document.createElement('h3');
-    const author = document.createElement('h5');
+    const title = document.createElement('h5');
+    const author = document.createElement('p');
     const pages = document.createElement('p');
 
     // Data insertion
@@ -100,11 +102,11 @@ const displayLibrary = (array) => {
     // delete a book Btn
     const deleteBtnEl = document.createElement('button');
     deleteBtnEl.classList.add('deletebtn');
-    deleteBtnEl.textContent = 'Delete';
+    deleteBtnEl.textContent = 'Delete!';
     deleteFn(deleteBtnEl);
 
     // Organogram
-    container.appendChild(div);
+    row.appendChild(div);
     div.appendChild(title);
     div.appendChild(author);
     div.appendChild(pages);

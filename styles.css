@@ -1,3 +1,9 @@
+:root{
+  --bgcolor-primary: rgb(219, 74, 30);
+  --fontcolor-primary : #fff;
+}
+
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -15,15 +21,18 @@ body {
   padding-bottom: 6rem;
   min-height: 100%;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  
+ 
 }
 
-#page-banner {
-  background: rgb(219, 74, 30);
-  padding: 10px 0;
+.navbar-light {
+  background: var(--bgcolor-primary) !important;
+  color:var(--fontcolor-primary);
 }
+
 
 .title {
-  color: #fff;
+  color: (--fontcolor-primary);
   margin: 0 auto;
   text-align: center;
   padding: 1rem;
@@ -31,61 +40,62 @@ body {
 }
 
 .container {
-  width: 80%;
-  margin: 10px auto;
-  background-color: rgb(87, 85, 85);
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto;
-  justify-content: space-around;
-  align-items: center;
-  padding: 1.5rem 1.5rem;
-  gap: 0.8rem;
+  width: 90%;
 }
 
-.bookdiv {
-  height: 30vh;
-  padding: 1rem;
-  margin: 10px 10px;
+.card {
+  padding: 1rem;    
   text-align: center;
-  background-color: #fff;
   color: rgb(219, 74, 30);
-  box-shadow: 5px 10px;
-  border-radius: 7px;
+  border: 1px dotted rgb(219, 74, 30);
+  box-shadow: 5px 10px rgb(49, 49, 49);
+  height: 250px;
+  position: relative;
+  margin-bottom: 10px;
 }
 
-.bookdiv:hover {
-  transform: scale(1.02, 1.02);
-}
-
-.readbtn {
-  width: 200px;
+.readbtn { 
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0; 
   background-color: rgb(53, 141, 65);
   border: 1px solid rgb(53, 141, 65);
   color: #fff;
   border-radius: 2px;
+  margin-bottom: 5px;
+  margin-left: 10px;  
 }
 
 .notreadbtn {
-  width: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-color: rgb(255, 136, 0);
   border: 1px solid rgb(255, 136, 0);
   color: #fff;
   border-radius: 2px;
+  margin-bottom: 5px;
+  margin-left: 10px;  
 }
 
 .deletebtn {
-  width: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 1;
+  margin-right: 10px;
   background-color: rgb(139, 18, 18);
   border: 1px solid rgb(139, 18, 18);
   color: #fff;
   border-radius: 2px;
+  margin-bottom: 5px;  
 }
 
 .newbook {
   display: flex;
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .addbtn {
@@ -93,7 +103,7 @@ body {
   border-radius: 5px;
   background-color: rgb(219, 74, 30);
   color: white;
-  width: 15vw;
+  width: 200px;
   margin: 0 auto;
   margin-bottom: 1.5rem;
   padding: 0.5rem;
@@ -145,18 +155,18 @@ form input:last-child {
 }
 
 .submitbtn {
-  background-color: rgb(117, 100, 117);
+  background-color: rgb(49, 49, 49);
   color: white;
   width: 10vw;
   padding: 0.1rem;
 }
 
 footer {
+  margin: 0 auto;
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
   background: rgb(49, 49, 49);
   color: #fff;
 }
@@ -169,7 +179,17 @@ footer li {
   list-style: none;
 }
 
+footer a {
+  color: rgb(219, 74, 30);
+}
+footer a:hover {
+  color: #fff;
+}
+
+.footer-copyright{
+  background-color: black;
+}
 .flexfooter {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
 }
